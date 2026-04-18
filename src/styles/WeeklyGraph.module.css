@@ -1,0 +1,65 @@
+/* src/styles/WeeklyGraph.module.css */
+
+.wrap {
+  width: 95%;
+  height: 100%;
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  gap: 12px;
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+.select {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background: white;
+  color: #111;
+}
+
+.select:hover {
+  opacity: 0.95;
+}
+
+.select:focus {
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.25);
+}
+
+.recharts-wrapper {
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .wrap {
+    padding: 14px;
+  }
+
+  .top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .select {
+    width: 100%;
+  }
+}

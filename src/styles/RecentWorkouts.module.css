@@ -1,0 +1,68 @@
+/* Home.module.css */
+
+.recentWrap {
+  width: 100%;
+}
+
+.sessionRow {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  align-items: center;
+
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 6px 18px rgba(0,0,0,0.22),
+    inset 0 1px 0 rgba(255,255,255,0.03);
+}
+
+.bigStat {
+  display: block;
+  color: white;
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.smallText {
+  display: block;
+  margin-top: 4px;
+  color: rgba(255,255,255,0.68);
+  font-size: 0.68rem;
+  line-height: 1.2;
+}
+
+.fatigueBar {
+  width: 48px;
+  height: 18px;
+  border-radius: 6px;
+  box-shadow:
+    0 0 10px rgba(255,255,255,0.06);
+}
+
+@media (max-width: 900px) {
+  .sessionRow {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .sessionRow {
+    grid-template-columns: 1fr;
+  }
+
+  .bigStat {
+    font-size: 0.95rem;
+  }
+
+  .smallText {
+    font-size: 0.64rem;
+  }
+}

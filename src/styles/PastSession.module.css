@@ -1,0 +1,236 @@
+/* src/styles/PastSession.module.css */
+
+/* MAIN CARD */
+.recentWrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* HEADER */
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-shrink: 0;
+}
+
+.title {
+  margin: 0;
+  color: white;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+/* SEE ALL BUTTON */
+.seeAllBtn {
+  border: none;
+  cursor: pointer;
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #1d4ed8
+  );
+  transition: 0.2s ease;
+  white-space: nowrap;
+}
+
+.seeAllBtn:hover {
+  transform: translateY(-1px);
+}
+
+/* SCROLLABLE SESSION LIST INSIDE CONTAINER */
+.sessionList {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+/* SESSION ROW */
+.sessionRow {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  cursor: pointer;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  align-items: center;
+
+  background: rgba(
+    255,
+    255,
+    255,
+    0.05
+  );
+  border: 1px solid
+    rgba(255, 255, 255, 0.08);
+
+  transition: 0.2s ease;
+}
+
+.sessionRow:hover {
+  background: rgba(
+    255,
+    255,
+    255,
+    0.08
+  );
+}
+
+.bigStat {
+  display: block;
+  color: white;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.smallText {
+  display: block;
+  margin-top: 4px;
+  color: rgba(
+    255,
+    255,
+    255,
+    0.65
+  );
+  font-size: 0.7rem;
+}
+
+.fatigueBar {
+  width: 46px;
+  height: 16px;
+  border-radius: 8px;
+}
+
+/* OVERLAY */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.65
+  );
+  backdrop-filter: blur(5px);
+  z-index: 9998;
+}
+
+/* MODAL PANEL */
+.sidePanel {
+  position: fixed;
+
+  top: 25%;
+  left: 20%;
+
+  transform: translate(-50%, -50%);
+
+  width: 760px;
+  max-width: 95vw;
+  max-height: 90vh;
+
+  background: #0f172a;
+  border-radius: 24px;
+  padding: 22px;
+
+  overflow-y: auto;
+
+  z-index: 9999;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.45);
+}
+
+/* PANEL HEADER */
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.panelHeader h2 {
+  margin: 0;
+  color: white;
+  font-size: 1.15rem;
+}
+
+.closeBtn {
+  border: none;
+  background: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* ALL SESSION LIST */
+.listRow {
+  padding: 14px;
+  border-radius: 14px;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+  background: rgba(
+    255,
+    255,
+    255,
+    0.04
+  );
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  transition: 0.2s ease;
+}
+
+.listRow:hover {
+  background: rgba(
+    255,
+    255,
+    255,
+    0.07
+  );
+}
+
+/* MAP */
+.mapWrap {
+  margin: 16px 0;
+  border-radius: 14px;
+  overflow: hidden;
+  height: 240px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .sidePanel {
+    width: 96vw;
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .sessionRow {
+    grid-template-columns: 1fr;
+  }
+
+  .topBar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .seeAllBtn {
+    width: 100%;
+  }
+}
+
